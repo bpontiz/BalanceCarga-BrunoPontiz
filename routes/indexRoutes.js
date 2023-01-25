@@ -60,7 +60,9 @@ apiRoutes.get('/info', (req, res) => {
         ? 'No argument inputs'
         : process.argv.slice(2);
 
-    const processVariables = {directory, id, nodeVersion, memory, platform, inputArgs};
+    const numProcessors = require('os').cpus().length;
+
+    const processVariables = {directory, id, nodeVersion, memory, platform, inputArgs, numProcessors};
 
     res.json(processVariables);
 });
