@@ -9,21 +9,21 @@ const calculate = (query) => {
 
     for (let i = 1; i < reqQuantity; i++) {
 
-    arrayRandoms.push(Math.floor(Math.random() * 1000));
+        arrayRandoms.push(Math.floor(Math.random() * 1000));
 
     };
 
     for (let j = 0; j < arrayRandoms.length - 1; j++) {
 
-    const filterArray = arrayRandoms.filter(num => num == arrayRandoms[j]).length;
+        const filterArray = arrayRandoms.filter(num => num == arrayRandoms[j]).length;
 
-    const actualIterator = {
+        const actualIterator = {
 
-        [arrayRandoms[j]]: filterArray
+            [arrayRandoms[j]]: filterArray
 
-    }
+        }
 
-    numberCounterArray.push(actualIterator);
+        numberCounterArray.push(actualIterator);
 
     };
 
